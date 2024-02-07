@@ -1,0 +1,151 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.header-left,
+.header-center,
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-center h1 {
+    font-size: 24px;
+    margin: 0;
+    margin-right: 20px;
+}
+
+.header-center {
+    display: flex;
+    flex-direction: column; /* Ajuste la disposition des éléments en colonne */
+    align-items: center;
+}
+
+.icon {
+    font-size: 24px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.search-bar {
+    padding: 8px;
+    font-size: 16px;
+}
+
+.header-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.header-right li {
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.header-right li i {
+    display: block; 
+    text-align: center;
+}
+
+.add-ad-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.filter-item {
+    margin-bottom: 10px;
+}
+
+.filters {
+    position: sticky;
+    top: 0;
+    height: 100vh; /* La hauteur de la section des filtres prend 100% de la hauteur visible */
+    width: 25%; /* Répartissez l'espace pour les filtres */
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #333; /* Ajout de couleur de fond */
+    color: #fff; /* Changement de couleur de texte */
+}
+
+.listings {
+    width: 70%; /* Répartissez l'espace pour les annonces et ajustez la largeur globale */
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff; /* Ajout de couleur de fond */
+    display: flex;
+    flex-direction: column; /* Aligne les annonces verticalement */
+    justify-content: space-between; /* Répartit l'espace entre les annonces */
+}
+
+.listing-item {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: left;
+    border: 1px solid #ccc;
+    padding: 15px;
+}
+
+.listing-image {
+    max-width: 300px;
+    max-height: 300px;
+    margin-right: 10px;
+}
+
+.text-content {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.favorite-button {
+    background-color: #ff3333;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    text-align: left;
+    margin-top: auto; 
+    align-self: flex-start;
+}
+.carousel {
+    text-align: center;
+    padding: 20px;
+}
+
+.carousel p {
+    font-size: 20px;
+}
+
+.carousel .add-ad-button {
+    margin-top: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
