@@ -8,7 +8,6 @@
 </head>
 <body>
 
-    <?php include_header(); ?>
     
     <header>
         <div class="header-left">
@@ -113,7 +112,6 @@
         </section>
     </div>
 
-    <?php include_footer(); ?>
     
 </body>
 </html>
