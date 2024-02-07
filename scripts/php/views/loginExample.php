@@ -36,7 +36,7 @@
 
         <form method="post" action="loginController.php">
             <fieldset>
-                <legend>Login</legend>
+                <legend>Log in</legend>
                 <input type="text" placeholder="login" id="login" name="login">
                 <input type="password" placeholder='password' id='pwd' name="pwd">
                 <button type="submit">Submit</button>
