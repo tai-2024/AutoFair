@@ -32,8 +32,8 @@
             <!-- Note that this could have been done with a simple link and a $_GET parameter -->
             <form method="post" action="index.php">
                 <fieldset>
-                    <legend>Logout</legend>
-                    <button type="submit">Logout</button>
+                    <legend>Log out</legend>
+                    <button type="submit">Log out</button>
                 </fieldset>
             </form>
         </main>
