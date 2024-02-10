@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/main_styles.css">
+    <link rel="stylesheet" href="./styles/main_styles.css">
     <title>LeBonCoin</title>
 </head>
 <body>
@@ -39,8 +39,12 @@
             <div class="filter-item">
                 <label for="mark">Mark:</label>
                 <select id="mark" name="mark">
-                    <option value="all">All</option>
-                    <!-- Add more brand options here -->
+                <?php
+                        // Output data of each row as an option tag
+                        foreach ($marks as $mark){
+                            echo "<option value='".$mark['id']."'>".$mark['type']."</option>";
+                        }
+                ?>
                 </select>
             </div>            
             <div class="filter-item">
@@ -111,7 +115,6 @@
             </div>
         </section>
     </div>
-
     
 </body>
 </html>
