@@ -1,5 +1,5 @@
 <?php
-include_once("C:/Users/kunmin.wang/OneDrive/文档/GitHub/AutoFair/AutoFair/scripts/php/views/includes.php");
+include_once("includes.php");
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +21,6 @@ include_once("C:/Users/kunmin.wang/OneDrive/文档/GitHub/AutoFair/AutoFair/scri
             include_error_message($something_to_say);
         }
     ?>
-
 
     <section class="carousel">
         <!-- Carousel content (images, description, etc.) -->
@@ -110,7 +109,6 @@ include_once("C:/Users/kunmin.wang/OneDrive/文档/GitHub/AutoFair/AutoFair/scri
     
     <!-- 底部内容 -->
     <?php include_footer(); ?>
-
 
     
 </body>
