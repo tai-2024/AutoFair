@@ -14,15 +14,21 @@
             <button class="add-ad-button">+ Add an Ad</button>
         </div>
         <div class="header-center">
-            <h1><a href="main_page.php">LeBonCoin</a></h1>
+            <h1><a href="markController.php">LeBonCoin</a></h1>
             <input type="text" placeholder="Search..." class="search-bar">
         </div>
         <div class="header-right">
             <ul>
-                <li><i class="icon">&#128269;</i><a href="login_page.php"><span> Search</span></li>
-                <li><i class="icon">&#10084;</i><a href="login_page.php"><span> Favorites</span></li>
-                <li><i class="icon">&#128172;</i><a href="login_page.php"><span> Message</span></li>
-                <li><i class="icon">&#128100;</i><a href="login_page.php"><span> Profile</span></a></li>
+                <li><i class="icon">&#128269;</i><a href="/loginController.php"><span> Search</span></li>
+                <li><i class="icon">&#10084;</i><a href="/loginController.php"><span> Favorites</span></li>
+                <li><i class="icon">&#128172;</i><a href="/loginController.php"><span> Message</span></li>
+                <?php
+                if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
+                    echo '<li><i class="icon">&#128100;</i><a href="/loginController.php"><span> Logout</span></a></li>';
+                } else {
+                    echo '<li><i class="icon">&#128100;</i><a href="/loginController.php"><span> Profile</span></a></li>';
+                }
+                ?>
             </ul>
         </div>
     </header>    
@@ -42,7 +48,7 @@
                 <div class="footer-center">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="main_page.php">Home</a></li>
+                        <li><a href="/main_page.php">Home</a></li>
                         <li><a href="#">About Us</a></li>
                         <li><a href="#">Services</a></li>
                         <li><a href="#">Contact</a></li>

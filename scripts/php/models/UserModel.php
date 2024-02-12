@@ -28,19 +28,35 @@ class UserModel extends DBModel {
         }
         // The request uses the MD5() functions since password should not be stored
         // without any protection in the database (i.e., use MD5() to store and retrieve passwords)
-        $request = "SELECT * FROM user WHERE login=:login AND password=MD5(:password)";
+        $request = "SELECT * FROM members WHERE pseudo=:pseudo AND motdepasse=:motdepasse";
         $statement = $this->db->prepare($request);
         $statement->execute([
-            "login" => $login,
-            "password" => $password
-        ]);
+            "pseudo" => $login,
+            "motdepasse" => $password
+        ]);        
         $entries = $statement->fetchAll();
         if (count($entries) == 1) {
-            $result["firstname"] = $entries[0]['firstname'];
-            $result["lastname"] = $entries[0]['lastname'];
+            $result["prenom"] = $entries[0]['prenom'];
+            $result["nom"] = $entries[0]['nom'];
         }
         return $result;
     }
+    
+    function get_role(string $login) {
+        $role = null;
+        if (!$this->connected) {
+            return $role;
+        }
+        $request = "SELECT id_role FROM members WHERE pseudo=:pseudo";
+        $statement = $this->db->prepare($request);
+        $statement->execute(["pseudo" => $login]);
+        $result = $statement->fetch(PDO::FETCH_ASSOC);
+        if ($result) {
+            $role = $result['id_role'];
+        }
+        return $role;
+    }
+    
 
     // other useful methods to interact with the database
     // could be to add a new user, to delete a user, to update a user, etc.

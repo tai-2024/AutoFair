@@ -10,6 +10,6 @@
 
     require_once(__DIR__."/scripts/php/views/includes.php");
 
-    require_once(__DIR__."/scripts/php/views/main_page.php");
+    require_once(__DIR__."/scripts/php/views/index.php");
 
 ?>
