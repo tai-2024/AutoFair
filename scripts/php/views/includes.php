@@ -11,10 +11,10 @@
         ?>
     <header>
         <div class="header-left">
-            <button class="add-ad-button">+ Add an Ad</button>
+            <a href="/adController.php" class="add-ad-button"><button>+ Add an Ad</button></a>
         </div>
         <div class="header-center">
-            <h1><a href="markController.php">LeBonCoin</a></h1>
+            <h1><a href="/markController.php">LeBonCoin</a></h1>
             <input type="text" placeholder="Search..." class="search-bar">
         </div>
         <div class="header-right">
@@ -48,7 +48,7 @@
                 <div class="footer-center">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="/main_page.php">Home</a></li>
+                        <li><a href="/markController.php">Home</a></li>
                         <li><a href="#">About Us</a></li>
                         <li><a href="#">Services</a></li>
                         <li><a href="#">Contact</a></li>

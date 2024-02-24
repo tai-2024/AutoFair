@@ -25,7 +25,7 @@ include_once("includes.php");
     <section class="carousel">
         <!-- Carousel content (images, description, etc.) -->
         <p>It is time for selling</p>
-        <button class="add-ad-button">+ Add an Ad</button>
+        <a href="/adController.php" class="add-ad-button"><button>+ Add an Ad</button></a>
     </section>
 
     <div class="container">
